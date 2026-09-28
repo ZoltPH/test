@@ -1,0 +1,98 @@
+{
+  "currency": "PHP",
+  "rate_unit": "per_1M_tokens",
+  "meta": {
+    "yuan_to_php_rate": 9.32,
+    "cost_ratio_of_sale_price": 0.40,
+    "note": "Charge rates below use tiered markup 3.5x-6x depending on model cost tier. Deduct: (tokens/1,000,000) * rate."
+  },
+  "tiers": {
+    "1": { "markup": 3.5, "label": "Budget / Flash" },
+    "2": { "markup": 4.0, "label": "Standard" },
+    "3": { "markup": 4.5, "label": "Mid-tier" },
+    "4": { "markup": 5.0, "label": "High-end" },
+    "5": { "markup": 6.0, "label": "Premium / Flagship" }
+  },
+  "models": [
+    { "id": "deepseek-v4-flash-0731", "provider": "DeepSeek", "tier": 1, "markup": 3.5, "input": 0.98, "output": 3.89, "cache_read": 0.02 },
+    { "id": "deepseek-v4-pro-0813", "provider": "DeepSeek", "tier": 2, "markup": 4.0, "input": 5.00, "output": 15.04, "cache_read": 0.16 },
+    { "id": "deepseek-v4.1-flash", "provider": "DeepSeek", "tier": 1, "markup": 3.5, "input": 2.59, "output": 10.40, "cache_read": 0.07 },
+    { "id": "deepseek-v4.1-flash-hc", "provider": "DeepSeek", "tier": 2, "markup": 4.0, "input": 4.84, "output": 19.32, "cache_read": 0.16 },
+
+    { "id": "glm-5.1", "provider": "GLM", "tier": 2, "markup": 4.0, "input": 8.92, "output": 31.20, "cache_read": 2.24 },
+    { "id": "glm-5.2", "provider": "GLM", "tier": 2, "markup": 4.0, "input": 8.92, "output": 31.20, "cache_read": 2.24 },
+    { "id": "glm-5.3", "provider": "GLM", "tier": 2, "markup": 4.0, "input": 8.92, "output": 31.20, "cache_read": 2.24 },
+    { "id": "glm-5.3-flash", "provider": "GLM", "tier": 1, "markup": 3.5, "input": 2.59, "output": 9.10, "cache_read": 0.74 },
+    { "id": "glm-5.3-flashx", "provider": "GLM", "tier": 2, "markup": 4.0, "input": 5.96, "output": 20.80, "cache_read": 2.12 },
+
+    { "id": "kimi-k2.6", "provider": "Kimi", "tier": 2, "markup": 4.0, "input": 7.24, "output": 30.08, "cache_read": 1.24 },
+    { "id": "kimi-k2.7-code", "provider": "Kimi", "tier": 2, "markup": 4.0, "input": 7.24, "output": 30.08, "cache_read": 1.44 },
+    { "id": "kimi-k3", "provider": "Kimi", "tier": 3, "markup": 4.5, "input": 25.07, "output": 125.42, "cache_read": 2.52 },
+
+    { "id": "minimax-m2.7", "provider": "MiniMax", "tier": 1, "markup": 3.5, "input": 2.07, "output": 8.19, "cache_read": 0.42 },
+    { "id": "minimax-m2.7-highspeed", "provider": "MiniMax", "tier": 2, "markup": 4.0, "input": 4.68, "output": 18.72, "cache_read": 0.48 },
+    { "id": "minimax-m3", "provider": "MiniMax", "tier": 1, "markup": 3.5, "input": 2.07, "output": 8.19, "cache_read": 0.42 },
+
+    { "id": "qwen3.7-max", "provider": "Qwen", "tier": 4, "markup": 5.0, "input": 44.60, "output": 133.80, "cache_read": 8.90 },
+    { "id": "qwen3.8-flash", "provider": "Qwen", "tier": 1, "markup": 3.5, "input": 2.07, "output": 7.04, "cache_read": 0.42 },
+    { "id": "qwen3.8-max", "provider": "Qwen", "tier": 4, "markup": 5.0, "input": 44.60, "output": 133.80, "cache_read": 8.90 },
+
+    { "id": "mimo-v2.5", "provider": "MiMo", "tier": 1, "markup": 3.5, "input": 1.61, "output": 3.26, "cache_read": 0.18 },
+    { "id": "mimo-v2.5-pro", "provider": "MiMo", "tier": 1, "markup": 3.5, "input": 3.01, "output": 5.95, "cache_read": 0.11 },
+    { "id": "mimo-v2.6-flash", "provider": "MiMo", "tier": 1, "markup": 3.5, "input": 2.59, "output": 5.22, "cache_read": 0.04 },
+    { "id": "mimo-v2.6-pro", "provider": "MiMo", "tier": 2, "markup": 4.0, "input": 8.92, "output": 17.84, "cache_read": 0.08 },
+
+    { "id": "hy3", "provider": "Hunyuan", "tier": 1, "markup": 3.5, "input": 0.98, "output": 3.89, "cache_read": 0.25 },
+    { "id": "hy4-preview", "provider": "Hunyuan", "tier": 2, "markup": 4.0, "input": 6.68, "output": 20.08, "cache_read": 0.32 },
+
+    { "id": "gpt-5.5", "provider": "OpenAI", "tier": 4, "markup": 5.0, "input": 41.80, "output": 250.85, "cache_read": 4.20 },
+    { "id": "gpt-5.6-luna", "provider": "OpenAI", "tier": 1, "markup": 3.5, "input": 1.26, "output": 7.04, "cache_read": 0.18 },
+    { "id": "gpt-5.6-sol", "provider": "OpenAI", "tier": 4, "markup": 5.0, "input": 41.80, "output": 250.85, "cache_read": 4.20 },
+    { "id": "gpt-5.6-terra", "provider": "OpenAI", "tier": 3, "markup": 4.5, "input": 15.03, "output": 90.32, "cache_read": 1.49 },
+    { "id": "gpt-6-astra", "provider": "OpenAI", "tier": 5, "markup": 6.0, "input": 100.32, "output": 501.66, "cache_read": 10.02 },
+    { "id": "gpt-6-luna", "provider": "OpenAI", "tier": 1, "markup": 3.5, "input": 0.67, "output": 3.26, "cache_read": 0.07 },
+    { "id": "gpt-6-sol", "provider": "OpenAI", "tier": 3, "markup": 4.5, "input": 15.03, "output": 75.24, "cache_read": 1.49 },
+
+    { "id": "claude-opus-4-7", "provider": "Anthropic", "tier": 4, "markup": 5.0, "input": 41.80, "output": 209.05, "cache_read": 4.20 },
+    { "id": "claude-opus-4-8", "provider": "Anthropic", "tier": 4, "markup": 5.0, "input": 41.80, "output": 209.05, "cache_read": 4.20 },
+    { "id": "claude-sonnet-5", "provider": "Anthropic", "tier": 3, "markup": 4.5, "input": 22.59, "output": 112.86, "cache_read": 2.25 },
+    { "id": "claude-fable-5", "provider": "Anthropic", "tier": 5, "markup": 6.0, "input": 100.32, "output": 501.66, "cache_read": 10.02 },
+    { "id": "claude-fable-5.1", "provider": "Anthropic", "tier": 5, "markup": 6.0, "input": 278.70, "output": 1393.50, "cache_read": 6.96 },
+    { "id": "claude-opus-5", "provider": "Anthropic", "tier": 4, "markup": 5.0, "input": 41.80, "output": 209.05, "cache_read": 4.20 },
+
+    { "id": "gemini-3.1-pro-preview", "provider": "Gemini", "tier": 3, "markup": 4.5, "input": 20.93, "output": 125.42, "cache_read": 2.07 },
+    { "id": "gemini-3.5-flash", "provider": "Gemini", "tier": 3, "markup": 4.5, "input": 15.66, "output": 94.05, "cache_read": 1.58 },
+    { "id": "gemini-3.6-flash", "provider": "Gemini", "tier": 3, "markup": 4.5, "input": 15.66, "output": 78.39, "cache_read": 1.58 },
+    { "id": "gemini-3.7-flash", "provider": "Gemini", "tier": 2, "markup": 4.0, "input": 6.96, "output": 34.84, "cache_read": 0.68 },
+    { "id": "gemini-3.8-flash", "provider": "Gemini", "tier": 2, "markup": 4.0, "input": 6.96, "output": 34.84, "cache_read": 0.68 },
+
+    { "id": "grok-4.5", "provider": "Grok", "tier": 3, "markup": 4.5, "input": 15.03, "output": 45.14, "cache_read": 3.78 },
+    { "id": "grok-4.6", "provider": "Grok", "tier": 3, "markup": 4.5, "input": 15.03, "output": 45.14, "cache_read": 3.78 }
+  ],
+  "balance_packages": [
+    { "sell_price_php": 100, "yuan_to_topup": 4, "real_cost_php": 37.28, "profit_php": 62.72 },
+    { "sell_price_php": 200, "yuan_to_topup": 8, "real_cost_php": 74.56, "profit_php": 125.44 },
+    { "sell_price_php": 300, "yuan_to_topup": 12, "real_cost_php": 111.84, "profit_php": 188.16 },
+    { "sell_price_php": 500, "yuan_to_topup": 21, "real_cost_php": 195.72, "profit_php": 304.28 },
+    { "sell_price_php": 1000, "yuan_to_topup": 42, "real_cost_php": 391.44, "profit_php": 608.56 },
+    { "sell_price_php": 1500, "yuan_to_topup": 64, "real_cost_php": 596.48, "profit_php": 903.52 },
+    { "sell_price_php": 2000, "yuan_to_topup": 85, "real_cost_php": 792.20, "profit_php": 1207.80 },
+    { "sell_price_php": 3000, "yuan_to_topup": 128, "real_cost_php": 1192.96, "profit_php": 1807.04 },
+    { "sell_price_php": 5000, "yuan_to_topup": 214, "real_cost_php": 1994.48, "profit_php": 3005.52 },
+    { "sell_price_php": 10000, "yuan_to_topup": 429, "real_cost_php": 3998.28, "profit_php": 6001.72 }
+  ],
+  "topup_formula": {
+    "description": "For any custom sell_price_php not in the table above",
+    "steps": [
+      "cost_budget_php = sell_price_php * 0.40",
+      "exact_yuan = cost_budget_php / 9.32",
+      "yuan_to_topup = FLOOR(exact_yuan)",
+      "real_cost_php = yuan_to_topup * 9.32",
+      "profit_php = sell_price_php - real_cost_php"
+    ]
+  },
+  "deduction_formula": {
+    "description": "Per chat request, deduct from user's PHP balance",
+    "formula": "cost = (input_tokens/1e6 * input) + (output_tokens/1e6 * output) + (cached_tokens/1e6 * cache_read)"
+  }
+}
