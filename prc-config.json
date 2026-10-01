@@ -21,7 +21,6 @@
     { "id": "glm-5.2", "provider": "GLM", "tier": 2, "markup": 2.0, "input": 14.91, "output": 52.19, "cache_read": 3.73 },
     { "id": "glm-5.3", "provider": "GLM", "tier": 2, "markup": 2.0, "input": 14.91, "output": 52.19, "cache_read": 3.73 },
     { "id": "glm-5.3-flash", "provider": "GLM", "tier": 1, "markup": 1.5, "input": 1.12, "output": 3.91, "cache_read": 0.32 },
-    { "id": "glm-5.3-flashx", "provider": "GLM", "tier": 2, "markup": 2.0, "input": 3.73, "output": 13.05, "cache_read": 1.06 },
 
     { "id": "kimi-k2.7-code", "provider": "Kimi", "tier": 2, "markup": 2.0, "input": 12.12, "output": 50.33, "cache_read": 2.42 },
     { "id": "kimi-k3", "provider": "Kimi", "tier": 3, "markup": 2.5, "input": 46.60, "output": 233.00, "cache_read": 4.66 },
@@ -30,9 +29,6 @@
 
     { "id": "qwen3.8-flash", "provider": "Qwen", "tier": 1, "markup": 1.5, "input": 1.40, "output": 4.19, "cache_read": 0.22 },
     { "id": "qwen3.8-max", "provider": "Qwen", "tier": 4, "markup": 3.0, "input": 36.35, "output": 111.84, "cache_read": 3.77 },
-
-    { "id": "mimo-v2.6-flash", "provider": "MiMo", "tier": 1, "markup": 1.5, "input": 1.40, "output": 2.80, "cache_read": 0.042 },
-    { "id": "mimo-v2.6-pro", "provider": "MiMo", "tier": 2, "markup": 2.0, "input": 8.11, "output": 16.22, "cache_read": 0.067 },
 
     { "id": "hy4", "provider": "Hunyuan", "tier": 2, "markup": 2.0, "input": 11.18, "output": 33.55, "cache_read": 0.56 },
 
