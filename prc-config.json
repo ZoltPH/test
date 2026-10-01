@@ -5,7 +5,7 @@
     "yuan_to_php_rate": 9.32,
     "supplier_group": "x0.1",
     "cost_ratio_of_sale_price": 0.50,
-    "note": "Based on supplier x0.1 group prices. Charge rate = supplier_yuan_per_1M * 9.32 * tier markup (1.5x-3x, flagships 3x). cache_read keeps each model's previous cache/input ratio (supplier cache price is not shown on the pricing page). Deduct: (tokens/1,000,000) * rate."
+    "note": "Source: supplier /api/pricing billing_expr (p, c, cr) x group ratio 0.1. Charge rate = supplier_yuan_per_1M * 9.32 * tier markup (1.5x-3x, flagships 3x). GPT models: supplier price is higher above 272k input tokens (not modeled here). Deduct: (tokens/1,000,000) * rate."
   },
   "tiers": {
     "1": { "markup": 1.5, "label": "Budget / Flash" },
@@ -14,29 +14,34 @@
     "4": { "markup": 3.0, "label": "Flagship" }
   },
   "models": [
-    { "id": "deepseek-v4-flash-0731", "provider": "DeepSeek", "tier": 1, "markup": 1.5, "input": 1.40, "output": 5.59, "cache_read": 0.029 },
-    { "id": "deepseek-v4-pro-0813", "provider": "DeepSeek", "tier": 2, "markup": 2.0, "input": 8.39, "output": 25.16, "cache_read": 0.27 },
-    { "id": "deepseek-v4.1-flash", "provider": "DeepSeek", "tier": 1, "markup": 1.5, "input": 1.40, "output": 5.59, "cache_read": 0.038 },
+    { "id": "deepseek-v4-flash-0731", "provider": "DeepSeek", "tier": 1, "markup": 1.5, "input": 1.40, "output": 5.59, "cache_read": 0.042 },
+    { "id": "deepseek-v4-pro-0813", "provider": "DeepSeek", "tier": 2, "markup": 2.0, "input": 8.39, "output": 25.16, "cache_read": 0.37 },
+    { "id": "deepseek-v4.1-flash", "provider": "DeepSeek", "tier": 1, "markup": 1.5, "input": 1.40, "output": 5.59, "cache_read": 0.042 },
 
-    { "id": "glm-5.2", "provider": "GLM", "tier": 2, "markup": 2.0, "input": 14.91, "output": 52.19, "cache_read": 3.74 },
-    { "id": "glm-5.3", "provider": "GLM", "tier": 2, "markup": 2.0, "input": 14.91, "output": 52.19, "cache_read": 3.74 },
+    { "id": "glm-5.2", "provider": "GLM", "tier": 2, "markup": 2.0, "input": 14.91, "output": 52.19, "cache_read": 3.73 },
+    { "id": "glm-5.3", "provider": "GLM", "tier": 2, "markup": 2.0, "input": 14.91, "output": 52.19, "cache_read": 3.73 },
     { "id": "glm-5.3-flash", "provider": "GLM", "tier": 1, "markup": 1.5, "input": 1.12, "output": 3.91, "cache_read": 0.32 },
-    { "id": "glm-5.3-flashx", "provider": "GLM", "tier": 2, "markup": 2.0, "input": 3.73, "output": 13.05, "cache_read": 1.33 },
+    { "id": "glm-5.3-flashx", "provider": "GLM", "tier": 2, "markup": 2.0, "input": 3.73, "output": 13.05, "cache_read": 1.06 },
 
-    { "id": "kimi-k2.7-code", "provider": "Kimi", "tier": 2, "markup": 2.0, "input": 12.12, "output": 50.33, "cache_read": 2.41 },
-    { "id": "kimi-k3", "provider": "Kimi", "tier": 3, "markup": 2.5, "input": 46.60, "output": 233.00, "cache_read": 4.68 },
+    { "id": "kimi-k2.7-code", "provider": "Kimi", "tier": 2, "markup": 2.0, "input": 12.12, "output": 50.33, "cache_read": 2.42 },
+    { "id": "kimi-k3", "provider": "Kimi", "tier": 3, "markup": 2.5, "input": 46.60, "output": 233.00, "cache_read": 4.66 },
 
-    { "id": "mimo-v2.6-flash", "provider": "MiMo", "tier": 1, "markup": 1.5, "input": 1.40, "output": 2.80, "cache_read": 0.022 },
-    { "id": "mimo-v2.6-pro", "provider": "MiMo", "tier": 2, "markup": 2.0, "input": 8.11, "output": 16.22, "cache_read": 0.073 },
+    { "id": "minimax-m3", "provider": "MiniMax", "tier": 1, "markup": 1.5, "input": 2.94, "output": 11.74, "cache_read": 0.59 },
 
-    { "id": "hy4", "provider": "Hunyuan", "tier": 2, "markup": 2.0, "input": 11.18, "output": 33.55, "cache_read": 0.54 },
+    { "id": "qwen3.8-flash", "provider": "Qwen", "tier": 1, "markup": 1.5, "input": 1.40, "output": 4.19, "cache_read": 0.22 },
+    { "id": "qwen3.8-max", "provider": "Qwen", "tier": 4, "markup": 3.0, "input": 36.35, "output": 111.84, "cache_read": 3.77 },
 
-    { "id": "gpt-5.6-luna", "provider": "OpenAI", "tier": 1, "markup": 1.5, "input": 0.28, "output": 1.68, "cache_read": 0.040 },
+    { "id": "mimo-v2.6-flash", "provider": "MiMo", "tier": 1, "markup": 1.5, "input": 1.40, "output": 2.80, "cache_read": 0.042 },
+    { "id": "mimo-v2.6-pro", "provider": "MiMo", "tier": 2, "markup": 2.0, "input": 8.11, "output": 16.22, "cache_read": 0.067 },
+
+    { "id": "hy4", "provider": "Hunyuan", "tier": 2, "markup": 2.0, "input": 11.18, "output": 33.55, "cache_read": 0.56 },
+
+    { "id": "gpt-5.6-luna", "provider": "OpenAI", "tier": 1, "markup": 1.5, "input": 0.28, "output": 1.68, "cache_read": 0.028 },
     { "id": "gpt-5.6-sol", "provider": "OpenAI", "tier": 4, "markup": 3.0, "input": 11.18, "output": 55.92, "cache_read": 1.12 },
-    { "id": "gpt-5.6-terra", "provider": "OpenAI", "tier": 3, "markup": 2.5, "input": 4.66, "output": 27.96, "cache_read": 0.46 },
-    { "id": "gpt-6-astra", "provider": "OpenAI", "tier": 4, "markup": 3.0, "input": 27.96, "output": 139.80, "cache_read": 2.79 },
-    { "id": "gpt-6-luna", "provider": "OpenAI", "tier": 1, "markup": 1.5, "input": 0.14, "output": 0.70, "cache_read": 0.015 },
-    { "id": "gpt-6-sol", "provider": "OpenAI", "tier": 4, "markup": 3.0, "input": 5.59, "output": 27.96, "cache_read": 0.55 },
+    { "id": "gpt-5.6-terra", "provider": "OpenAI", "tier": 3, "markup": 2.5, "input": 4.66, "output": 27.96, "cache_read": 0.47 },
+    { "id": "gpt-6-astra", "provider": "OpenAI", "tier": 4, "markup": 3.0, "input": 27.96, "output": 139.80, "cache_read": 2.80 },
+    { "id": "gpt-6-luna", "provider": "OpenAI", "tier": 1, "markup": 1.5, "input": 0.14, "output": 0.70, "cache_read": 0.014 },
+    { "id": "gpt-6-sol", "provider": "OpenAI", "tier": 4, "markup": 3.0, "input": 5.59, "output": 27.96, "cache_read": 0.56 },
 
     { "id": "gemini-3.7-flash", "provider": "Gemini", "tier": 2, "markup": 2.0, "input": 1.40, "output": 6.99, "cache_read": 0.14 },
     { "id": "gemini-3.8-flash", "provider": "Gemini", "tier": 2, "markup": 2.0, "input": 1.40, "output": 6.99, "cache_read": 0.14 }
